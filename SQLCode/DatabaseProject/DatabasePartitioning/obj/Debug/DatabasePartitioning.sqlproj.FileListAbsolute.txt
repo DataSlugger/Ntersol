@@ -1,0 +1,5 @@
+C:\Users\jmont\source\repos\Github\DataEngineerProjects\DatabasePartitioning\bin\Debug\DatabasePartitioning.dacpac
+C:\Users\jmont\source\repos\Github\DataEngineerProjects\DatabasePartitioning\obj\Debug\DatabasePartitioning.dll
+C:\Users\jmont\source\repos\Github\DataEngineerProjects\DatabasePartitioning\obj\Debug\DatabasePartitioning.pdb
+C:\Users\jmont\source\repos\Github\DataEngineerProjects\DatabasePartitioning\bin\Debug\DatabasePartitioning.dll
+C:\Users\jmont\source\repos\Github\DataEngineerProjects\DatabasePartitioning\bin\Debug\DatabasePartitioning.pdb

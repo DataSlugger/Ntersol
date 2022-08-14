@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseName>PRTWarehouse</TargetDatabaseName>
+    <DeployScriptFileName>DatabasePartitioning.sql</DeployScriptFileName>
+    <BlockOnPossibleDataLoss>True</BlockOnPossibleDataLoss>
+    <CreateNewDatabase>True</CreateNewDatabase>
+    <TargetConnectionString>Data Source=localhost,11433;Persist Security Info=False;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
+    <ProfileVersionNumber>1</ProfileVersionNumber>
+  </PropertyGroup>
+  <ItemGroup>
+    <SqlCmdVariable Include="PRTData">
+      <Value>/var/opt/mssql/data/</Value>
+    </SqlCmdVariable>
+  </ItemGroup>
+</Project>

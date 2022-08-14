@@ -1,0 +1,19 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+USER root
+#Creating Working Directory on Container
+RUN mkdir -p /usr/sqlwork
+WORKDIR /usr/sqlwork
+
+#Copying scripts and all files to working directory
+COPY execute-import.sh /usr/sqlwork/
+COPY create-sqldb.sh /usr/sqlwork/
+COPY setup.sql /usr/sqlwork/
+
+# Granting Permission on Container Folder Files to be Executable
+RUN chmod +x /usr/sqlwork/execute-import.sh
+
+EXPOSE 1433
+
+USER mssql
+ENTRYPOINT /bin/bash ./create-sqldb.sh

@@ -1,0 +1,33 @@
+﻿** Highlights
+     Tables that will be rebuilt
+       None
+     Clustered indexes that will be dropped
+       None
+     Clustered indexes that will be created
+       None
+     Possible data issues
+       None
+
+** User actions
+     Create
+       [CurrentYearFG10] (Filegroup)
+       [PF_CurrentYear] (Partition Function)
+       [PF_OldestYears] (Partition Function)
+       [PF_PrevYear] (Partition Function)
+       [PS_CurrentYear] (Partition Scheme)
+       [PS_OldestYears] (Partition Scheme)
+       [PS_PrevYear] (Partition Scheme)
+       [dbo].[TblCurrentMonth] (Table)
+       [dbo].[TblCY] (Table)
+       [dbo].[TblOldestYears] (Table)
+       [dbo].[TblPrevYear] (Table)
+       Default Constraint: unnamed constraint on [dbo].[TblCurrentMonth] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblCurrentMonth] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblCY] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblCY] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblOldestYears] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblOldestYears] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblPrevYear] (Default Constraint)
+       Default Constraint: unnamed constraint on [dbo].[TblPrevYear] (Default Constraint)
+
+** Supporting actions

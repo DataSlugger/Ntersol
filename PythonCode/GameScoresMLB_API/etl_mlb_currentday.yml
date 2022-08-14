@@ -1,0 +1,42 @@
+name: etl_mlb_currentday_job
+
+on: 
+  schedule: 
+    - cron: '*/15 15-23,00-06 * 4-10 *' # runs at 11:00 to 06:00 CST everyday    
+    - cron: '*/15 15-23,00-06 1-10 11 *' # runs at 11:00 to 06:00 CST only 11/01 to 11/10
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: checkout repo content
+        uses: actions/checkout@v2
+      
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.0' # install python 3.9.0
+      
+      - name: install python packages
+        run: |
+          python -m pip install --upgrade pip
+          pip install pandas
+          pip install numpy
+          pip install sqlalchemy
+          pip install psycopg2          
+          pip install requests
+          pip install python-dotenv
+        
+      - name: execute Py script
+        env:
+          POSTGRESQL_DATABASE: ${{ secrets.POSTGRESQL_DATABASE }}
+          POSTGRESQL_SERVER: ${{ secrets.POSTGRESQL_SERVER }}
+          POSTGRESQL_USER: ${{ secrets.POSTGRESQL_USER }}
+          POSTGRESQL_SECRET: ${{ secrets.POSTGRESQL_SECRET }}
+          POSTGRESQL_SERVER_PORT: ${{ secrets.POSTGRESQL_SERVER_PORT }}
+        run: |
+          python MLBGamesScoresNew.py
+        working-directory: ./GamesScore
+
+          

@@ -1,0 +1,25 @@
+- title: README
+  file: /README
+- title: Table of Contents
+  file: /content/toc2
+  not_numbered: true
+  expand_sections: true
+  sections:
+    - title: PowerShell NoteBooks
+      file: /content/PowerShell/readmeps
+      numbering: true
+      search: true
+      divider: true
+      expand_sections: true
+      sections:
+        - title: How To Create SQL Container from PowerShell
+          file: /content/PowerShell/PSSQLContainer
+        - title: Checking SSAS Instance Status on Remote Server
+          file: /content/PowerShell/checkSSASRemote
+    - title: Python Notebooks
+      file: /content/Python/readmepy
+      numbering: true
+      expand_sections: true
+      sections:
+        - title: How To Create a SQL Container from Python 3.9
+          file: /content/Python/PYSQLContainer
